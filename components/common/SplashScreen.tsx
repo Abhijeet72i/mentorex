@@ -27,7 +27,7 @@ export default function SplashScreen() {
           key="splash"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as const}}
           className="fixed inset-0 z-[200] flex items-center justify-center bg-neutral-900"
         >
           <div className="relative flex flex-col items-center">
@@ -45,7 +45,7 @@ export default function SplashScreen() {
             <motion.h1
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ delay: 1.1, duration: 0.6, ease: [0.22, 1, 0.36, 1]as const }}
               className="text-3xl font-semibold tracking-tight text-white sm:text-4xl"
             >
               Mentor<span className="text-indigo-400">Ex</span>
@@ -55,7 +55,7 @@ export default function SplashScreen() {
             <motion.div
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
-              transition={{ delay: 1.5, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ delay: 1.5, duration: 0.6, ease: [0.22, 1, 0.36, 1] as const }}
               style={{ transformOrigin: "left" }}
               className="mt-3 h-[2px] w-40 bg-gradient-to-r from-indigo-400 to-violet-400"
             />

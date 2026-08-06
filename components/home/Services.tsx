@@ -1,7 +1,7 @@
 // components/home/Services.tsx
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView,Variants } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Calculator, Atom, BookOpen, Code2, BrainCircuit, Languages, ArrowUpRight } from "lucide-react";
 import BookReveal from "@/components/common/BookReveal";
@@ -15,9 +15,9 @@ const services = [
   { icon: Languages, title: "Languages", desc: "One-to-one lessons in Hindi, English, and French with expert tutors." },
 ];
 
-const fadeUp = {
+const fadeUp:Variants= {
   hidden: { opacity: 0, y: 32 },
-  show: (i: number = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] } }),
+  show: (i: number = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1]as const } }),
 };
 
 export default function Services() {

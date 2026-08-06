@@ -1,7 +1,7 @@
 // components/contact/ContactInfo.tsx
 "use client";
 
-import { motion } from "framer-motion";
+import { motion,Variants } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const info = [
@@ -22,9 +22,9 @@ const info = [
   },
 ];
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
-  show: (i: number = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] } }),
+  show: (i: number = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] as const } }),
 };
 
 export default function ContactInfo() {

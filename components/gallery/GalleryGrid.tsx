@@ -2,11 +2,11 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence,Variants } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { galleryItems } from "@/data/gallery";
 
-const fadeUp = {
+const fadeUp:Variants= {
   hidden: { opacity: 0, y: 24 },
   show: (i: number = 0) => ({
     opacity: 1,
@@ -14,7 +14,7 @@ const fadeUp = {
     transition: {
       duration: 0.5,
       delay: i * 0.05,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   }),
 };

@@ -1,7 +1,7 @@
 // components/contact/ContactForm.tsx
 "use client";
 
-import { motion } from "framer-motion";
+import { motion,Variants } from "framer-motion";
 import { useState } from "react";
 import { Send, CheckCircle2, AlertCircle } from "lucide-react";
 
@@ -20,7 +20,7 @@ export default function ContactForm() {
 
     const formData = new FormData(e.currentTarget);
     const data = {
-      fullName: formData.get("name"),
+      name: formData.get("name"),
       email: formData.get("email"),
       subject: formData.get("subject"),
       country: formData.get("country"),

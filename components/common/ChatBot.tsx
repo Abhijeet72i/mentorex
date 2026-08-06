@@ -117,7 +117,7 @@ export default function ChatBot() {
         aria-label="Open chat assistant"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1.2, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ delay: 1.2, duration: 0.4, ease: [0.22, 1, 0.36, 1] as const }}
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
         className="fixed bottom-6 left-6 z-[90] flex h-14 w-14 items-center justify-center rounded-full bg-neutral-900 shadow-lg shadow-black/20"
@@ -131,7 +131,7 @@ export default function ChatBot() {
             initial={{ opacity: 0, y: 20, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.96 }}
-            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] as const}}
             className="fixed bottom-24 left-6 z-[90] flex h-[480px] w-[340px] max-w-[calc(100vw-3rem)] flex-col overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-2xl"
           >
             <div className="flex items-center justify-between bg-neutral-900 px-5 py-4">

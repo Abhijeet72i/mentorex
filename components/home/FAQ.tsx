@@ -1,7 +1,7 @@
 // components/home/FAQ.tsx
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence,Variants } from "framer-motion";
 import { useState } from "react";
 import { Plus } from "lucide-react";
 
@@ -38,12 +38,12 @@ const faqs = [
   },
 ];
 
-const fadeUp = {
+const fadeUp:Variants= {
   hidden: { opacity: 0, y: 24 },
   show: (i: number = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.5, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] as const},
   }),
 };
 
@@ -104,7 +104,7 @@ export default function FAQ() {
                   </span>
                   <motion.span
                     animate={{ rotate: isOpen ? 45 : 0 }}
-                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1]as const }}
                     className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-neutral-100"
                   >
                     <Plus className="h-4 w-4 text-neutral-700" />
@@ -117,7 +117,7 @@ export default function FAQ() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1]as const }}
                       className="overflow-hidden"
                     >
                       <p className="px-6 pb-5 text-sm leading-relaxed text-neutral-600 sm:text-base">

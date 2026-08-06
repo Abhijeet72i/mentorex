@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence,Variants } from "framer-motion";
 import { X, Star, GraduationCap, Clock } from "lucide-react";
 
 interface Review {
@@ -72,9 +72,9 @@ const team: TeamMember[] = [
   },
 ];
 
-const fadeUp = {
+const fadeUp:Variants= {
   hidden: { opacity: 0, y: 28 },
-  show: (i: number = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] } }),
+  show: (i: number = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] as const } }),
 };
 
 export default function TeamSection() {
@@ -133,7 +133,7 @@ export default function TeamSection() {
               initial={{ opacity: 0, y: 24, scale: 0.96 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 24, scale: 0.96 }}
-              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] as const }}
               onClick={(e) => e.stopPropagation()}
               className="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-3xl bg-white shadow-2xl"
             >

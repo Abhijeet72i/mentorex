@@ -1,7 +1,7 @@
 // components/home/Statistics.tsx
 "use client";
 
-import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
+import { motion, useInView, useMotionValue, useTransform, animate,Variants } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { Users, Globe2, TrendingUp, GraduationCap, Book } from "lucide-react";
 
@@ -37,12 +37,12 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
   return <span ref={ref}>0{suffix}</span>;
 }
 
-const fadeUp = {
+const fadeUp:Variants = {
   hidden: { opacity: 0, y: 32 },
   show: (i: number = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] as const },
   }),
 };
 

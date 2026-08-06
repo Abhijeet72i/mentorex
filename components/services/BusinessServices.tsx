@@ -1,7 +1,7 @@
 // components/services/BusinessServices.tsx
 "use client";
 
-import { motion } from "framer-motion";
+import { motion,Variants } from "framer-motion";
 import Link from "next/link";
 import { LayoutDashboard, Headset, TrendingUp, ArrowRight, Check } from "lucide-react";
 
@@ -53,9 +53,9 @@ const businessServices = [
   },
 ];
 
-const fadeUp = {
+const fadeUp:Variants= {
   hidden: { opacity: 0, y: 28 },
-  show: (i: number = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] } }),
+  show: (i: number = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] as const} }),
 };
 
 export default function BusinessServices() {
