@@ -20,7 +20,7 @@ export default function ContactForm() {
 
     const formData = new FormData(e.currentTarget);
     const data = {
-      name: formData.get("name"),
+      fullName: formData.get("name"),
       email: formData.get("email"),
       subject: formData.get("subject"),
       country: formData.get("country"),

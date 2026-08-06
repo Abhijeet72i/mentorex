@@ -49,7 +49,7 @@ const team: TeamMember[] = [
   {
     name: "Seema Rawol",
     role: "Mathematics || English || IELTS",
-    image: "/images/team/seemarawol.jpeg",
+    image: "/images/team/Seemarawol.jpeg",
     subjects: ["English,Mathematics & IELTS"],
     experience: "3 years teaching experience",
     bio: "A dedicated MentorEx tutor specializing in Mathematics, Science, English, and IELTS preparation. Committed to delivering engaging, personalized lessons that build strong concepts, improve confidence, and help students achieve their academic and language goals.",
