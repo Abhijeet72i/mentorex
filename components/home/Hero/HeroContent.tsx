@@ -27,25 +27,22 @@ export default function HeroContent() {
       <h1 className="mt-8 text-5xl font-extrabold leading-tight tracking-tight text-slate-900 md:text-7xl">
         Helping Students
         <br />
-        Build Their
+        Achieve Their
         <span className="block bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 bg-clip-text text-transparent">
-          Global Future.
+        Academic goal.
         </span>
       </h1>
 
       {/* Description */}
       <p className="mt-8 max-w-xl text-lg leading-8 text-slate-600">
-        Personalized guidance for admissions, study abroad,
-        scholarships, visa assistance, and career planning —
-        helping students confidently achieve their international
-        education goals.
+        Empowering students with customized learning plans, expert tutors, and individual attention to achieve outstanding results.
       </p>
 
       {/* Buttons */}
       <div className="mt-10 flex flex-wrap gap-4">
         <Link href="/contact" className="group rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 px-8 py-4 font-semibold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
           <span className="flex items-center gap-2">
-            Book Free Consultation
+            Book Free Demo Session
             <ArrowRight size={18} className="transition group-hover:translate-x-1" />
           </span>
         </Link>

@@ -75,7 +75,7 @@ export default function Navbar() {
             href="/contact"
             className="rounded-full bg-blue-600 px-8 py-4 text-[16px] font-semibold text-white transition-all duration-300 hover:bg-blue-700 hover:scale-105"
           >
-            Book Consultation
+            Book Free Demo Session
           </Link>
         </div>
 
