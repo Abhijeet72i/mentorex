@@ -33,7 +33,7 @@ export default function CEOCard() {
             <div className="mt-4 text-center lg:text-left">
               <p className="text-lg font-semibold text-neutral-900">Kailash Negi</p>
               <p className="text-sm text-neutral-500">Chief Executive Officer</p>
-              <a href="#" aria-label="Kailash Negi on LinkedIn" className="mt-2 inline-flex h-8 w-8 items-center justify-center rounded-full bg-neutral-100 text-neutral-600 transition-colors duration-300 hover:bg-neutral-900 hover:text-white">
+              <a href="https://www.linkedin.com/company/tutorpediaglobal/" aria-label="Kailash Negi on LinkedIn" className="mt-2 inline-flex h-8 w-8 items-center justify-center rounded-full bg-neutral-100 text-neutral-600 transition-colors duration-300 hover:bg-neutral-900 hover:text-white">
                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
                   <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.7c0-1.6-.03-3.65-2.22-3.65-2.23 0-2.57 1.74-2.57 3.53V23h-4V8.5z" />
                 </svg>
