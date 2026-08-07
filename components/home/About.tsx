@@ -7,14 +7,15 @@ import {
   Video,
   Award,
   Users,
+  Laptop,
 } from "lucide-react";
 
 const features = [
   {
     icon: GraduationCap,
-    title: "Expert Career Guidance",
+    title: "Personalized Learning Plans",
     description:
-      "Personalized counselling to help students choose the right academic and career path.",
+      "Every student receives a customized study plan designed around their strengths, learning pace, and academic goals.",
   },
   {
   icon: Video,
@@ -29,10 +30,10 @@ const features = [
       "Experienced mentors dedicated to helping students achieve global success.",
   },
   {
-    icon: Users,
-    title: "Student-First Approach",
+    icon: Laptop,
+    title: "Interactive Online Learning",
     description:
-      "Every recommendation is tailored to the student's goals and aspirations.",
+      "Engaging live one-to-one classes with screen sharing, digital whiteboards, and flexible schedules for effective learning.",
   },
 ];
 
@@ -53,7 +54,7 @@ export default function About() {
             </span>
 
             <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
-              Empowering Students to Build Successful Global Careers
+        Empowering students with customized learning plans, expert tutors, and individual attention to achieve outstanding results.
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-slate-600">
