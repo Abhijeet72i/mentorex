@@ -3,8 +3,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const links = [
   { title: "Home", href: "/" },
@@ -23,61 +23,69 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
+
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 z-80 w-full transition-all duration-300 ${
-        scrolled ? "bg-white/90 backdrop-blur-xl shadow-md" : "bg-transparent"
+      className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? "bg-white/95 backdrop-blur-xl shadow-md"
+          : "bg-white"
       }`}
     >
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <div className="relative h-90 w-135">
-            <Image
-              src="/logos/logo.png"
-              alt="Mentorex - An Educated Choice"
-              fill
-              sizes="(max-width: 768px) 200px, 300px"
-              className="object-contain object-left"
-              priority
-            />
-          </div>
-        </Link>
+      <div className="mx-auto flex h-28 max-w-[1400px] items-center justify-between px-8">
 
-        {/* Desktop Menu */}
-        <nav className="hidden items-center gap-8 lg:flex">
-          {links.map((link) => (
-            <Link
-              key={link.title}
-              href={link.href}
-              className="font-medium text-slate-700 transition hover:text-blue-600"
-            >
-              {link.title}
-            </Link>
-          ))}
+        {/* Logo */}
+        <div className="w-[340px] flex-shrink-0">
+          <Link href="/">
+            <Image
+              src="/logo.png"
+              alt="MentorEx"
+              width={320}
+              height={80}
+              priority
+              className="w-full h-auto object-contain"
+            />
+          </Link>
+        </div>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden flex-1 justify-center lg:flex">
+          <ul className="flex items-center gap-10">
+            {links.map((link) => (
+              <li key={link.title}>
+                <Link
+                  href={link.href}
+                  className="text-[17px] font-medium text-slate-700 transition hover:text-blue-600"
+                >
+                  {link.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
 
         {/* CTA */}
-        <div className="hidden lg:block ml-6">
+        <div className="hidden w-[260px] justify-end lg:flex">
           <Link
             href="/contact"
-            className="rounded-full bg-blue-600 px-6 py-3 font-semibold text-white transition hover:scale-105 hover:bg-blue-700"
+            className="rounded-full bg-blue-600 px-8 py-4 text-[16px] font-semibold text-white transition-all duration-300 hover:bg-blue-700 hover:scale-105"
           >
             Book Consultation
           </Link>
         </div>
 
-        {/* Mobile Button */}
+        {/* Mobile Menu Button */}
         <button
-          className="lg:hidden"
           onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
+          className="lg:hidden"
+          aria-label="Toggle Menu"
         >
-          {open ? <X size={30} /> : <Menu size={30} />}
+          {open ? <X size={32} /> : <Menu size={32} />}
         </button>
       </div>
 
@@ -90,7 +98,7 @@ export default function Navbar() {
                 key={link.title}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="font-medium text-slate-700"
+                className="text-lg font-medium text-slate-700"
               >
                 {link.title}
               </Link>
@@ -99,7 +107,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-blue-600 py-3 px-6 text-center font-semibold text-white transition hover:bg-blue-700"
+              className="mt-2 rounded-full bg-blue-600 py-3 text-center text-lg font-semibold text-white"
             >
               Book Consultation
             </Link>
