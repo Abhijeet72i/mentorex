@@ -1,29 +1,29 @@
 // components/home/WhyChooseUs.tsx
 "use client";
 
-import { motion,Variants} from "framer-motion";
-import { Target, Clock, Award, HeartHandshake } from "lucide-react";
+import { motion,progress,Variants} from "framer-motion";
+import { Target, Clock, Award, HeartHandshake, EarthIcon } from "lucide-react";
 
 const reasons = [
   {
     icon: Target,
-    title: "Precision-Matched Guidance",
-    desc: "We don't push universities — we match you to the ones that actually fit your profile and goals.",
+    title: "Personalized 1-to-1 Learning",
+    desc: "Every lesson is tailored to your child's learning style, pace, and academic goals for maximum progress.",
   },
   {
     icon: Clock,
-    title: "15+ Years of Experience",
-    desc: "A track record built on real outcomes, not marketing promises.",
+    title: "7+ Years of Experience",
+    desc: "Learn from experienced tutors in Mathematics, Science, English, Coding, and more with dedicated one-on-one support.",
   },
   {
-    icon: Award,
-    title: "Recognized Excellence",
-    desc: "Award-winning counselling team trusted by thousands of families.",
+    icon: progress,
+    title: "Regular Progress Tracking",
+    desc: "Receive detailed performance reports, homework feedback, and continuous assessments to ensure steady improvement.",
   },
   {
-    icon: HeartHandshake,
-    title: "End-to-End Commitment",
-    desc: "We stay with you from your first consultation to your first day on campus.",
+    icon: EarthIcon,
+    title: "Flexible Online Classes",
+    desc: "Attend live interactive sessions from anywhere with flexible scheduling that fits your family's routine.",
   },
 ];
 
@@ -93,9 +93,7 @@ export default function WhyChooseUs() {
               viewport={{ once: true }}
               className="mt-5 max-w-md text-lg leading-relaxed text-neutral-400"
             >
-              We built Mentorex around one idea — students deserve advisors
-              who are honest, experienced, and genuinely invested in their
-              success.
+              We created MentorEx to make quality education personal. Our experienced tutors deliver one-to-one online classes that focus on each student's unique learning needs and academic goals.
             </motion.p>
           </div>
 
