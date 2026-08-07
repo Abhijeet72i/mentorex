@@ -37,9 +37,9 @@ export default function AboutHero() {
           animate="show"
           className="mt-6 text-4xl font-semibold tracking-tight text-neutral-900 sm:text-6xl"
         >
-          Empowering students to build
+          Empowering students with customized learning plans, expert tutors, and individual attention to
           <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
-            {" "}successful global careers.
+            {" "}achieve outstanding results.
           </span>
         </motion.h1>
 
@@ -50,9 +50,7 @@ export default function AboutHero() {
           animate="show"
           className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-neutral-600"
         >
-          We're a team of counsellors, admissions experts, and former
-          international students on a mission to make studying abroad
-          transparent, achievable, and personal.
+          We're a team of experienced educators and dedicated tutors on a mission to make quality education personalized, accessible, and engaging for every student.
         </motion.p>
       </div>
     </section>
