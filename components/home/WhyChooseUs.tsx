@@ -1,8 +1,8 @@
 // components/home/WhyChooseUs.tsx
 "use client";
 
-import { motion,progress,Variants} from "framer-motion";
-import { Target, Clock, Award, HeartHandshake, EarthIcon } from "lucide-react";
+import { motion, Variants } from "framer-motion";
+import { Target, Clock, TrendingUp, Earth } from "lucide-react";
 
 const reasons = [
   {
@@ -13,52 +13,52 @@ const reasons = [
   {
     icon: Clock,
     title: "7+ Years of Experience",
-    desc: "Learn from experienced tutors in Mathematics, Science, English, Coding, and more with dedicated one-on-one support.",
+    desc: "Learn from experienced tutors in Mathematics, Science, English, Coding, and more with dedicated one-to-one support.",
   },
   {
-    icon: progress,
+    icon: TrendingUp,
     title: "Regular Progress Tracking",
     desc: "Receive detailed performance reports, homework feedback, and continuous assessments to ensure steady improvement.",
   },
   {
-    icon: EarthIcon,
+    icon: Earth,
     title: "Flexible Online Classes",
     desc: "Attend live interactive sessions from anywhere with flexible scheduling that fits your family's routine.",
   },
 ];
 
-const fadeUp:Variants = {
-  hidden: { opacity: 0, y: 32 },
+const fadeUp: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 32,
+  },
   show: (i: number = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] as const },
+    transition: {
+      duration: 0.6,
+      delay: i * 0.1,
+      ease: [0.22, 1, 0.36, 1],
+    },
   }),
 };
 
 export default function WhyChooseUs() {
   return (
-    <section
-      id="why-choose-us"
-      className="relative w-full overflow-hidden bg-neutral-900 py-24 sm:py-32"
-    >
+    <section className="relative overflow-hidden bg-neutral-950 py-24 sm:py-32">
       {/* Background accents */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-0 top-0 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-500/10 blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-[400px] w-[400px] translate-x-1/3 translate-y-1/3 rounded-full bg-violet-500/10 blur-3xl" />
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-          }}
-        />
-      </div>
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
+          backgroundSize: "48px 48px",
+        }}
+      />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:items-start">
-          {/* Left: Heading */}
+          {/* Left */}
           <div className="lg:col-span-5">
             <motion.span
               variants={fadeUp}
@@ -81,7 +81,8 @@ export default function WhyChooseUs() {
             >
               The difference is in
               <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
-                {" "}how we guide.
+                {" "}
+                how we guide.
               </span>
             </motion.h2>
 
@@ -93,14 +94,17 @@ export default function WhyChooseUs() {
               viewport={{ once: true }}
               className="mt-5 max-w-md text-lg leading-relaxed text-neutral-400"
             >
-              We created MentorEx to make quality education personal. Our experienced tutors deliver one-to-one online classes that focus on each student's unique learning needs and academic goals.
+              We created MentorEx to make quality education personal. Our
+              experienced tutors deliver one-to-one online classes that focus on
+              each student's unique learning needs and academic goals.
             </motion.p>
           </div>
 
-          {/* Right: Reasons grid */}
+          {/* Right */}
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:col-span-7">
             {reasons.map((reason, i) => {
               const Icon = reason.icon;
+
               return (
                 <motion.div
                   key={reason.title}
@@ -115,9 +119,11 @@ export default function WhyChooseUs() {
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-white transition-colors duration-300 group-hover:bg-gradient-to-br group-hover:from-indigo-500 group-hover:to-violet-500">
                     <Icon className="h-5 w-5" strokeWidth={1.75} />
                   </div>
+
                   <h3 className="mt-5 text-base font-semibold text-white">
                     {reason.title}
                   </h3>
+
                   <p className="mt-2 text-sm leading-relaxed text-neutral-400">
                     {reason.desc}
                   </p>
