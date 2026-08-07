@@ -13,7 +13,7 @@ const info = [
   {
     icon: Mail,
     label: "Email",
-    lines: ["mentorexglobal@gmail.com"],
+    lines: ["contact@mentorex.in"],
   },
   {
     icon: Phone,

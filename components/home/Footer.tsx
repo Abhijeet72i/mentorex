@@ -64,7 +64,7 @@ export default function Footer() {
             <div className="mt-6 space-y-3">
               <a href="mailto:hello@mentorex.com" className="flex items-center gap-2.5 text-sm text-neutral-400 transition-colors duration-300 hover:text-white">
                 <Mail className="h-4 w-4" />
-                    mentorexglobal@gmail.com
+                    contact@mentorex.in
 
               </a>
               <a href="tel:+911234567890" className="flex items-center gap-2.5 text-sm text-neutral-400 transition-colors duration-300 hover:text-white">
