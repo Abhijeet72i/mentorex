@@ -43,7 +43,7 @@ export default function Navbar() {
         <div className="w-[340px] flex-shrink-0">
           <Link href="/">
             <Image
-              src="/logo.png"
+              src="/mex.png"
               alt="MentorEx"
               width={320}
               height={80}
