@@ -63,21 +63,16 @@ export default function OurStory() {
               className="mt-6 space-y-4 text-base leading-relaxed text-neutral-600"
             >
               <p>
-                Mentorex started in 2010 when our founders — themselves
-                first-generation international students — saw how confusing
-                and opaque the study-abroad process could be. Good advice was
-                either too expensive or too generic.
+                MentorEx started in 2019 with a simple belief: every student deserves access to quality education, personalized guidance, and a teacher who truly understands how they learn.
               </p>
               <p>
-                Today, we've grown into a team of 40+ counsellors and
-                admissions specialists, working with students across 25+
-                countries. But our approach hasn't changed: honest guidance,
-                real data, and a mentor who actually knows your name.
+                What began as a vision to make effective tutoring more accessible has grown into an online learning platform supporting students across 4+ countries. Our tutors help students build strong foundations, prepare for exams, develop new skills, and gain the confidence to achieve their academic goals.
               </p>
               <p>
-                We measure our success not in applications submitted, but in
-                students who tell us, years later, that we helped them make
-                the right decision.
+                But our approach has remained the same: personalized learning, experienced tutors, flexible online classes, and genuine individual attention.
+              </p>
+              <p>
+We measure our success not by the number of classes delivered, but by the progress our students make — the concepts they finally understand, the confidence they gain, and the results they achieve.
               </p>
             </motion.div>
           </div>

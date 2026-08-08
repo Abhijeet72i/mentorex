@@ -4,9 +4,9 @@ import { motion,Variants} from "framer-motion";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 
 const points = [
-  "Free initial consultation",
-  "Personalised university shortlist",
-  "End-to-end application support",
+  "Free Demo Session",
+  "Personalised One to One Teaching",
+  "End-to-end Support",
 ];
 
 const fadeUp:Variants = {
@@ -58,7 +58,7 @@ export default function CTA() {
                 viewport={{ once: true }}
                 className="mt-5 max-w-md text-lg leading-relaxed text-neutral-400"
               >
-                Book a free consultation with a Mentorex counsellor and take the first step toward studying abroad.
+                Book a free Demo Session with a Mentorex Tutors.
               </motion.p>
 
               <motion.ul
@@ -87,13 +87,13 @@ export default function CTA() {
               className="rounded-2xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur-sm"
             >
               <p className="text-sm font-medium text-neutral-400">Get started today</p>
-              <p className="mt-2 text-2xl font-semibold text-white">Free 30-Minute Consultation</p>
+              <p className="mt-2 text-2xl font-semibold text-white">Free 30-Minute Demo Session</p>
               <p className="mt-3 text-sm leading-relaxed text-neutral-400">
-                No commitment required. Talk to an expert about your study abroad options.
+                No commitment required. Talk to a tutor and explore the right learning path for you..
               </p>
 
               <a href="/contact" className="group mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-neutral-900 transition-transform duration-300 hover:scale-[1.02]">
-                Book Consultation
+                Book Free Demo Session
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </motion.div>
