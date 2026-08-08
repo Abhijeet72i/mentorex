@@ -58,8 +58,7 @@ export default function Footer() {
             </Link>
 
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-neutral-400">
-              Personalised guidance for students pursuing global education — from shortlisting to settling in abroad.
-            </p>
+Personalised learning support for students — from finding the right tutor to achieving their academic goals.            </p>
 
             <div className="mt-6 space-y-3">
               <a href="mailto:hello@mentorex.com" className="flex items-center gap-2.5 text-sm text-neutral-400 transition-colors duration-300 hover:text-white">

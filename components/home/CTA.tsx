@@ -14,7 +14,7 @@ const fadeUp:Variants = {
   show: (i: number = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] as const},
   }),
 };
 
@@ -44,9 +44,9 @@ export default function CTA() {
                 viewport={{ once: true }}
                 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl"
               >
-                Ready to start your{" "}
+                Ready to Start your{" "}
                 <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
-                  global journey?
+                  Education Journey?
                 </span>
               </motion.h2>
 

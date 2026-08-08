@@ -31,7 +31,7 @@ const testimonials = [
     name: "Karan Mehta",
     role: "Admitted to Technical University of Munich",
     quote:
-      "Professional, transparent, and always available for questions. Highly recommend Mentorex to any student going abroad.",
+      "Professional, supportive, and always available when I needed help. Highly recommend MentorEx to any student looking to improve their skills and achieve better results.",
     avatar: "https://i.pravatar.cc/150?img=68",
   },
 ];
