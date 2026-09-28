@@ -7,15 +7,25 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
-    // Check API Key
+    // =========================================
+    // CHECK API KEY
+    // =========================================
     if (!process.env.RESEND_API_KEY) {
       console.error("RESEND_API_KEY is missing");
+
       return NextResponse.json(
-        { error: "Server configuration error" },
-        { status: 500 }
+        {
+          error: "Server configuration error",
+        },
+        {
+          status: 500,
+        }
       );
     }
 
+    // =========================================
+    // GET REQUEST BODY
+    // =========================================
     const body = await request.json();
 
     console.log("Incoming Request:", body);
@@ -23,14 +33,18 @@ export async function POST(request: NextRequest) {
     const {
       fullName,
       email,
+      phone,
       subject,
       country,
       preferredTime,
       message,
     } = body;
 
-    // Validation
-    if (!fullName || !email || !subject || !country) {
+    // =========================================
+    // VALIDATION
+    // Phone is now REQUIRED
+    // =========================================
+    if (!fullName || !email || !phone || !subject || !country) {
       return NextResponse.json(
         {
           error: "Missing required fields",
@@ -41,32 +55,77 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // =========================================
+    // SEND EMAIL
+    // =========================================
     const { data, error } = await resend.emails.send({
       from: "Mentorex <onboarding@resend.dev>",
-      to: process.env.CONTACT_EMAIL || "iamabhijeet45@gmail.com",
+
+      to:
+        process.env.CONTACT_EMAIL ||
+        "iamabhijeet45@gmail.com",
+
       replyTo: email,
+
       subject: `New Demo Booking Request - ${subject}`,
+
       html: `
-        <h2>New Demo Session Booking</h2>
+        <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #222;">
 
-        <p><strong>Full Name:</strong> ${fullName}</p>
+          <h2 style="color: #2c5077;">
+            New Demo Session Booking
+          </h2>
 
-        <p><strong>Email:</strong> ${email}</p>
+          <hr />
 
-        <p><strong>Subject:</strong> ${subject}</p>
+          <p>
+            <strong>Full Name:</strong>
+            ${fullName}
+          </p>
 
-        <p><strong>Country:</strong> ${country}</p>
+          <p>
+            <strong>Email:</strong>
+            ${email}
+          </p>
 
-        <p><strong>Preferred Time:</strong> ${
-          preferredTime ?? "Not specified"
-        }</p>
+          <p>
+            <strong>Phone Number:</strong>
+            ${phone}
+          </p>
 
-        <p><strong>Message:</strong> ${
-          message ?? "No message provided"
-        }</p>
+          <p>
+            <strong>Subject:</strong>
+            ${subject}
+          </p>
+
+          <p>
+            <strong>Country:</strong>
+            ${country}
+          </p>
+
+          <p>
+            <strong>Preferred Time:</strong>
+            ${preferredTime ?? "Not specified"}
+          </p>
+
+          <p>
+            <strong>Message:</strong>
+            ${message ?? "No message provided"}
+          </p>
+
+          <hr />
+
+          <p style="font-size: 12px; color: #777;">
+            This enquiry was submitted through the MentorEx website.
+          </p>
+
+        </div>
       `,
     });
 
+    // =========================================
+    // RESEND ERROR
+    // =========================================
     if (error) {
       console.error("Resend Error:", error);
 
@@ -80,6 +139,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // =========================================
+    // SUCCESS
+    // =========================================
     console.log("Email Sent:", data);
 
     return NextResponse.json(
