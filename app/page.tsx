@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Affordable Online Tutoring UK & Australia | MentorEx",
     description:
       "Discover personalised one-to-one online tuition with MentorEx. Explore school subjects, exam preparation and coding lessons for students in the UK and Australia.",
-    url: "https://mentorex.in/",
+    url: "https://www.mentorex.in/",
     type: "website",
   },
 };
