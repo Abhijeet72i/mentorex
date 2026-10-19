@@ -16,6 +16,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/privacy",
     "/terms",
+
+    // Country-specific tutoring SEO pages
+    "/online-tutoring-uk",
+    "/online-tutoring-australia",
   ];
 
   return [
@@ -23,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}${path || "/"}`,
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
-      priority: path === "" ? 1 : 0.7,
+      priority: path === "" ? 1 : 0.9,
     })),
 
     ...subjects.map((subject) => ({
