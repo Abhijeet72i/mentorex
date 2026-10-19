@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 import { subjects } from "@/data/subjects";
 import { businessServices } from "@/data/businessServices";
 
-const baseUrl = "https://mentorex.in";
+const baseUrl = "https://www.mentorex.in";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [

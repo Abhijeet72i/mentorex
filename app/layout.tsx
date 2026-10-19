@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://mentorex.in";
+const siteUrl = "https://www.mentorex.in";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -71,11 +71,7 @@ export const metadata: Metadata = {
   category: "Education",
 
   alternates: {
-    languages: {
-      "en-GB": "/online-tutoring-uk",
-      "en-AU": "/online-tutoring-australia",
-      "x-default": "/",
-    },
+    canonical: "/",
   },
 
   openGraph: {
