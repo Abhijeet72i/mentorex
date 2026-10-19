@@ -44,9 +44,16 @@ export default function StudyDestinations() {
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2">
-          {countries.map((dest, i) => (
+          {countries.map((dest, i) => {
+            const destinationHref = dest.slug === "united-kingdom"
+              ? "/online-tutoring-uk"
+              : dest.slug === "australia"
+                ? "/online-tutoring-australia"
+                : "/countries";
+
+            return (
             <motion.div key={dest.slug} variants={fadeUp} custom={i} initial="hidden" whileInView="show" viewport={{ once: true }} whileHover={{ y: -6 }}>
-              <Link href="/countries" className="group relative block h-[360px] overflow-hidden rounded-3xl">
+              <Link href={destinationHref} aria-label={`Explore online tutoring in ${dest.name}`} className="group relative block h-[360px] overflow-hidden rounded-3xl">
                 <img
                   src={images[dest.slug]}
                   alt={dest.name}
@@ -73,7 +80,8 @@ export default function StudyDestinations() {
                 </div>
               </Link>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
