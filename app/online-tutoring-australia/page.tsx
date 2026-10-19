@@ -254,6 +254,18 @@ export default function AustraliaTutoringPage() {
         </div>
       </section>
 
+      <section className="bg-slate-50 px-5 py-12 sm:py-16">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">Explore More MentorEx Learning Options</h2>
+          <p className="mt-3 max-w-3xl leading-7 text-slate-600">Explore other tutoring destinations and subjects to find the support that best fits your student.</p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a href="/online-tutoring-uk" className="rounded-xl border border-slate-300 bg-white px-4 py-3 font-semibold text-indigo-800 transition hover:border-indigo-500 hover:bg-indigo-50">Online Tutoring in the UK</a>
+            <a href="/programs" className="rounded-xl border border-slate-300 bg-white px-4 py-3 font-semibold text-indigo-800 transition hover:border-indigo-500 hover:bg-indigo-50">Explore Tutoring Subjects</a>
+            <a href="/contact" className="rounded-xl border border-slate-300 bg-white px-4 py-3 font-semibold text-indigo-800 transition hover:border-indigo-500 hover:bg-indigo-50">Ask About Australian Tuition</a>
+          </div>
+        </div>
+      </section>
+
       <section className="px-5 py-16 sm:py-20">
         <div className="mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
